@@ -12,6 +12,8 @@
   align-items: center;
 }
 
+
+
 .footer {
   display: flex;
   flex: 1;
@@ -125,5 +127,43 @@
   }
   .logo img {
     filter: invert(1);
+  }
+}
+
+
+.homebg{
+  background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    
+    
+}
+
+
+
+.turtle {
+  position: absolute;
+  animation: run 5s linear infinite;
+}
+@keyframes run {
+  0% {
+    left: 0;
+  }
+  48% {
+    transform: rotateY(0deg); 
+  }
+  50% { 
+    left: calc(100% - 100px);
+    transform: rotateY(180deg); 
+  }
+  98% {
+    transform: rotateY(180deg); 
+  }
+  100% {
+    left: 0;    
+    transform: rotateY(0deg);
   }
 }
