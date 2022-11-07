@@ -13,7 +13,13 @@ import {
 
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
+import {
+  MouseParallaxContainer,
+  MouseParallaxChild,
+} from "react-parallax-mouse";
+
 import world from "./image/world.jpg";
+import smiley from "./image/smiley.png";
 
 export default function Home() {
   // const Component =()=>{
@@ -27,8 +33,39 @@ export default function Home() {
   //   )
   // }
 
+  // const background = require('/image/smiley.png')
+
   return (
     <div>
+      <div className={styles.homebg}>
+        <MouseParallaxContainer globalFactorX={0.1} globalFactorY={0.1}>
+          <MouseParallaxChild factorX={0.3} factorY={0.5}>
+            {/* <img src={require('./image/smiley.png')} alt="smiley" /> */}
+            {/* <Image src={}/> */}
+          </MouseParallaxChild>
+          <MouseParallaxChild factorX={0.7} factorY={0.8}>
+            <img src="./image/smiley.png" alt="smiley" />
+          </MouseParallaxChild>
+        </MouseParallaxContainer>
+      </div>
+
+      {/* <div className={styles.container}>
+
+      
+    <MouseParallax >
+          <div
+          className={styles.container}
+            style={{ width: "100px", height: "100px", backgroundColor: "red" }}
+          >
+            <p>move</p>
+          </div>
+        </MouseParallax>
+
+        <ScrollParallax>
+          <p>I'm reacting to scroll</p>
+        </ScrollParallax>
+    </div> */}
+
       <Parallax
         pages={4}
         // className="homebg"
@@ -60,7 +97,7 @@ export default function Home() {
           </ParallaxLayer>
         </ParallaxLayer>
 
-        <ParallaxLayer sticky={{ start: 0.5, end: 1 }}>
+        {/* <ParallaxLayer sticky={{ start: 0.5, end: 1 }}>
           <img
             className={styles.turtle}
             alt="turtle"
@@ -69,7 +106,7 @@ export default function Home() {
           />
 
           <h2> 2 烏龜 </h2>
-        </ParallaxLayer>
+        </ParallaxLayer> */}
 
         <ParallaxLayer
           offset={2}
@@ -122,15 +159,7 @@ export default function Home() {
         >
           <h2> second </h2>
         </ParallaxLayer>
-
-
-        
-
-
       </Parallax>
-
-
-  
     </div>
   );
   // <div className={styles.container}>

@@ -132,13 +132,11 @@
 
 
 .homebg{
-  background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
+ 
+    position: relative;
     width: 100%;
-    position: absolute;
-    
+    display: flex;
+    justify-content: center;
     
 }
 
