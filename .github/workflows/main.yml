@@ -19,5 +19,5 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          push: ture
+          push: true
           tags: p53512/teamhomework:latest, p53512/teamhomework:${{ github.run_number }}
