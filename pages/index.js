@@ -40,8 +40,7 @@ export default function Home() {
       <div className={styles.homebg}>
         <MouseParallaxContainer globalFactorX={0.1} globalFactorY={0.1}>
           <MouseParallaxChild factorX={0.3} factorY={0.5}>
-            {/* <img src={require('./image/smiley.png')} alt="smiley" /> */}
-            {/* <Image src={}/> */}
+            <Image src={smiley} width={100} height={100} alt="smiley"/>
           </MouseParallaxChild>
           <MouseParallaxChild factorX={0.7} factorY={0.8}>
             <img src="./image/smiley.png" alt="smiley" />
