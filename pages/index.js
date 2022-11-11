@@ -18,8 +18,16 @@ import {
   MouseParallaxChild,
 } from "react-parallax-mouse";
 
-import world from "./image/world.jpg";
 import smiley from "./image/smiley.png";
+import Hourglass from "./image/Hourglass.png";
+import morecirle from "./image/morecirle.png";
+import th4 from "./image/th4.png";
+import net from "./image/net.png";
+import DefaultWhite from "./image/DefaultWhite.png";
+import circle from "./image/circle.png";
+import Group39856 from "./image/Group39856.png";
+import N from './image/N.png'
+import thef2e from './image/thef2e.png'
 
 export default function Home() {
   // const Component =()=>{
@@ -37,14 +45,105 @@ export default function Home() {
 
   return (
     <div>
-      <div className={styles.homebg}>
-        <MouseParallaxContainer globalFactorX={0.1} globalFactorY={0.1}>
-          <MouseParallaxChild factorX={0.3} factorY={0.5}>
-            <Image src={smiley} width={100} height={100} alt="smiley"/>
+      <div
+        // className={styles.homebg}
+        style={{
+          height: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          backgroundColor: "#1C1D5F",
+        }}
+      >
+        <Head>
+          <title> 互動式網頁設計</title>
+        </Head>
+        <MouseParallaxContainer
+          globalFactorX={0.1}
+          globalFactorY={0.1}
+        >
+          <MouseParallaxChild
+            factorX={0.3}
+            factorY={0.1}
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              position: 'relative',
+              zIndex: 99,
+            }}
+          >
+            <Image src={Hourglass} />
+
+            
+
+            <div>
+              <Image src={th4} alt="4th" className={styles.fourth} />
+            </div>
+            <MouseParallaxChild
+              factorX={0.9}
+              factorY={0.4}
+              style={{
+                // display: "flex",
+                // justifyContent: 'flex-end',
+                position: "relative",
+                left: "5%",
+              }}
+            >
+              <Image src={circle} alt="cirle" className={styles.circle} />
+            </MouseParallaxChild>
+            
+            <div style={{position: 'absolute',
+              left: '15%',
+              top: '89%'}}>
+            <Image src={Group39856} alt="半圓" />
+            </div>
+          
           </MouseParallaxChild>
-          <MouseParallaxChild factorX={0.7} factorY={0.8}>
-            <img src="./image/smiley.png" alt="smiley" />
+
+          <MouseParallaxChild
+            factorX={0}
+            factorY={0}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <Image src={thef2e} alt="thef2e" />
+            <Image src={morecirle} alt="morecirle" className={styles.morecircl} />
+
+            <MouseParallaxChild>
+            </MouseParallaxChild>
+
           </MouseParallaxChild>
+
+          <MouseParallaxChild
+            factorX={0.7}
+            factorY={0.5}
+            style={{
+              // display: "flex",
+              // justifyContent: 'space-around',
+              position: 'relative',}}
+          >
+            <Image src={net} alt="net" className={styles.net}/>
+
+          <div style={{position: 'absolute',
+              right: '28%',
+              }}>
+            <Image src={DefaultWhite} alt="滑鼠" />
+          </div>
+
+            <MouseParallaxChild>
+              <div style={{
+              left: '75%',
+              position: 'relative',}}>
+            <Image src={N}  alt="N" />
+              </div>
+            </MouseParallaxChild>
+              
+          
+          </MouseParallaxChild>
+
+          
         </MouseParallaxContainer>
       </div>
 
@@ -67,7 +166,8 @@ export default function Home() {
 
       <Parallax
         pages={4}
-        // className="homebg"
+        // style={{overflowY:'unset'}}
+        className="bbbbbbbbbbbbg"
       >
         <ParallaxLayer
           // className={styles.main}
@@ -96,7 +196,7 @@ export default function Home() {
           </ParallaxLayer>
         </ParallaxLayer>
 
-        {/* <ParallaxLayer sticky={{ start: 0.5, end: 1 }}>
+        <ParallaxLayer sticky={{ start: 0.5, end: 1 }}>
           <img
             className={styles.turtle}
             alt="turtle"
@@ -105,7 +205,7 @@ export default function Home() {
           />
 
           <h2> 2 烏龜 </h2>
-        </ParallaxLayer> */}
+        </ParallaxLayer>
 
         <ParallaxLayer
           offset={2}

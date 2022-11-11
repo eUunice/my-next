@@ -137,10 +137,17 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    
+  margin: auto;
 }
 
 
+.first{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 100% ;
+}
 
 .turtle {
   position: absolute;
@@ -164,4 +171,29 @@
     left: 0;    
     transform: rotateY(0deg);
   }
+}
+
+.circle {
+  top: 5%;
+    position: absolute;
+    left: 70%;
+}
+
+.fourth {
+  /* right: 10%;
+    top: 30%; */
+    top: 15%;
+    right: 7%;
+    position: absolute
+}
+
+.morecircl{
+  right: 0%;
+  position: absolute;
+}
+
+.net{
+  bottom: 30%;
+  left: 5%;
+  position: absolute;
 }
