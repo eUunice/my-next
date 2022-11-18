@@ -197,3 +197,39 @@
   left: 5%;
   position: absolute;
 }
+
+.girl{
+  /* display: 'flex';
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+
+.qq {
+  /* top: 5%;
+    position: absolute;
+    right: 0%;
+    z-index: 99; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 900px;
+    justify-content: space-between;
+
+    z-index: 99;
+    position: absolute;
+    right: -3%;
+  bottom: 10%;
+
+}
+
+.leftPng{
+  bottom: -30%;
+  position: absolute;
+}
+
